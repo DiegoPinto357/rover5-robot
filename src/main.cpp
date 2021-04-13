@@ -1,9 +1,18 @@
 #include <Arduino.h>
 
-void setup() {
-  // put your setup code here, to run once:
+void setup()
+{
+  pinMode(LED_BUILTIN, OUTPUT);
+
+  Serial.begin(9600);
+  Serial.println("I am alive!");
 }
 
-void loop() {
-  // put your main code here, to run repeatedly:
+void loop()
+{
+  digitalWrite(LED_BUILTIN, HIGH);
+  delay(10);
+  digitalWrite(LED_BUILTIN, LOW);
+  delay(990);
+  Serial.println("Hey! You there?");
 }
